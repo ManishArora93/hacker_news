@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hacker_news_id: 
+  url: MyText
+  title: MyText
+  score: 
+  hn_timestamp: 2018-10-05 00:01:42
+
+two:
+  hacker_news_id: 
+  url: MyText
+  title: MyText
+  score: 
+  hn_timestamp: 2018-10-05 00:01:42
