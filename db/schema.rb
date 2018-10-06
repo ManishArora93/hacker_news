@@ -10,14 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_04_185545) do
+ActiveRecord::Schema.define(version: 2018_10_06_160313) do
+
+  create_table "read_and_deleteds", force: :cascade do |t|
+    t.integer "story_id"
+    t.integer "user_id"
+    t.string "action_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_read_and_deleteds_on_user_id"
+  end
 
   create_table "stories", force: :cascade do |t|
     t.integer "hacker_news_id"
     t.text "url"
     t.text "title"
     t.integer "score"
-    t.datetime "hn_timestamp"
+    t.integer "hn_timestamp"
+    t.integer "descendants"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

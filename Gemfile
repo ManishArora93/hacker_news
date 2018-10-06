@@ -44,6 +44,17 @@ gem 'whenever'
 # Hacker news data fetching
 gem 'hackernews_ruby'
 
+#Hacker news fetching datat per page dependency
+gem 'require_all', '~> 1.3', '>= 1.3.3'
+
+#Using slim pages
+gem 'slim'
+
+#Pagination
+gem 'will_paginate', '~> 3.1.0'
+
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

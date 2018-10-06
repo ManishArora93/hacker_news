@@ -1,15 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  hacker_news_id: 
+  hacker_news_id: 1
   url: MyText
   title: MyText
-  score: 
-  hn_timestamp: 2018-10-05 00:01:42
+  score: 1
+  hn_timestamp: 1
+  descendants: 1
 
 two:
-  hacker_news_id: 
+  hacker_news_id: 1
   url: MyText
   title: MyText
-  score: 
-  hn_timestamp: 2018-10-05 00:01:42
+  score: 1
+  hn_timestamp: 1
+  descendants: 1

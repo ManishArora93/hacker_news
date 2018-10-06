@@ -1,0 +1,16 @@
+h1
+ = "New Stories"
+ol
+  - @stories_to_display.each do |story|
+    li
+      = link_to(story.title.html_safe, story.url, :target => "_blank")
+      = "  Upvotes - #{story.score}  "
+      = "Comments - #{story.descendants}  "
+      = "Created On - #{DateTime.strptime(story.hn_timestamp.to_s,'%s').strftime("%d-%h-%Y At %H:%M:%S")}"
+
+      - if current_user.read_and_deleteds.read.collect(&:story_id).include? (story.id)
+        = " Marked as Read"
+      - else
+        = button_to "Mark as Read", mark_post_as_read_stories_path(story_id: story.id), :method => "post"
+      = button_to "Delete this Story", delete_story_for_user_stories_path(story_id: story.id), :method => "post", data: {confirm: 'Are you sure?'}, class: "delete_story"
+= will_paginate @stories_to_display
