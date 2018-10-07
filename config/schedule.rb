@@ -19,6 +19,6 @@
 
 # Learn more: http://github.com/javan/whenever
 
-every 15.minutes do
+every :day, at: '11pm' do
   rake "cron_tasks:pull_top_stories_from_hacker_news"
 end

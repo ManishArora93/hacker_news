@@ -39,7 +39,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise'
 
 # Scheduling Jobs
-gem 'whenever'
+gem 'whenever', require: false
 
 # Hacker news data fetching
 gem 'hackernews_ruby'
